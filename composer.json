@@ -1,0 +1,77 @@
+{
+	"name": "wpdesk/shopmagic-cart",
+	"authors": [
+		{
+			"name": "Krzysiek",
+			"email": "krzysiek@wpdesk.net"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"WPDesk\\ShopMagicCart\\": "src",
+			"WPDesk\\ShopMagicCart\\migrations\\": "migrations"
+		},
+		"classmap": [
+			"vendor_prefixed"
+		]
+	},
+	"autoload-dev": {
+		"classmap": [
+			"tests/unit",
+			"tests/integration"
+		]
+	},
+	"config": {
+		"sort-packages": true,
+		"platform": {
+			"php": "7.3.33"
+		},
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"kylekatarnls/update-helper": true,
+			"cweagans/composer-patches": true,
+			"wpdesk/wp-codeception": true,
+			"wpdesk/wp-wpdesk-composer": true,
+			"phpstan/extension-installer": true
+		}
+	},
+	"prefer-stable": true,
+	"minimum-stability": "dev",
+	"require": {
+		"php": ">=7.3|^8"
+	},
+	"require-dev": {
+		"10up/wp_mock": "*",
+		"phpstan/extension-installer": "^1",
+		"phpstan/phpstan": "^1",
+		"phpunit/phpunit": "^8 | ^9",
+		"szepeviktor/phpstan-wordpress": "^1",
+		"wpdesk/wp-basic-requirements": "^3.2.3",
+		"wpdesk/wp-builder": "^2",
+		"wpdesk/wp-codeception": "^2.11",
+		"wpdesk/wp-notice": "^3.1.3",
+		"wpdesk/wp-plugin-flow-free": "^1.0",
+		"wpdesk/wp-wpdesk-composer": "^2.22.0"
+	},
+	"extra": {
+		"text-domain": "shopmagic-abandoned-carts",
+		"translations-folder": "lang",
+		"translation-file-headers": {
+			"Project-Id-Version": "Plugin Template",
+			"Last-Translator": "Grzegorz Rola <grola@wpdesk.pl>",
+			"X-Poedit-WPHeader": "shopmagic-abandon-cart.php"
+		},
+		"po-files": {
+			"pl_PL": "pl_PL.po"
+		},
+	  "wp-requires-at-least": "5.0",
+	  "prefix_psr": true
+	},
+	"scripts": {
+		"test": "echo composer is alive",
+		"phpcs": "phpcs",
+		"phpunit-unit": "phpunit --configuration phpunit-unit.xml --coverage-text --colors=never",
+		"phpunit-integration": "phpunit --configuration phpunit-integration.xml --coverage-text --colors=never",
+		"docs": "apigen generate"
+	}
+}

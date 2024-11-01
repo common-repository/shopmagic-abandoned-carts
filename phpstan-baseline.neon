@@ -1,0 +1,11 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Plugin.php
+
+		-
+			message: "#^Parameter \\#1 \\$provider of method WPDesk\\\\ShopMagic\\\\Integration\\\\ExternalPluginsAccess\\:\\:add_test_provider\\(\\) expects WPDesk\\\\ShopMagic\\\\DataSharing\\\\DataProvider, mixed given\\.$#"
+			count: 1
+			path: src/Plugin.php
